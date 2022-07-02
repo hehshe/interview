@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FristNameCao面试题</title>
+    <style>
+    body{
+        padding-top: 100px;
+        min-width: 824px;
+        box-sizing: border-box;
+    }
+    body::-webkit-scrollbar {
+        width: 12px;
+
+    }
+   .show-box::-webkit-scrollbar {
+    width: 12px;
+
+
+    }
+
+        * {
+            margin: 0px auto;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: pink;
+        }
+
+        hr {
+            border: 1px solid pink;
+        }
+
+        .FristNameCao {
+            text-align: center;
+            margin: 20px 0px 20px 0px;
+        }
+
+        .right {
+            margin-left: 80px;
+            /* padding-right: 500px; */
+        }
+
+        .sousuo {
+            margin-left: 80px;
+        }
+
+        .sousuo input {
+            height: 24px;
+            width: 444px;
+            border-radius: 8px;
+            color: pink;
+            border-color: pink;
+        }
+
+        .btn {
+            width: 69px;
+            height: 50px;
+            border-radius: 4px;
+            color: pink;
+            border-color: pink;
+        }
+        /* 标题导航栏 */
+        .nav-bar{
+            width: 100%;
+            min-width: 824px;
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            /* width:300px; */
+            /* height: 500px; */
+            left: 0;
+            top: 0;
+            background: rgba(255, 255, 255, .5);
+            display: flex;
+
+        }
+        .item{
+            position: relative;
+            border-bottom: 1px solid #efefef;
+
+        }
+        .item h1 {
+            margin: 0;
+            padding: 0;
+            color: black;
+        }
+        .nav-bar .item:hover h1{
+               /* background-color: pink; */
+               color: pink;
+        }
+        .nav-bar .item:hover .show-box{
+             display: block;
+        }
+        .show-box{
+            padding-right: 12px;
+            display: none;
+            background-color: rgba(111, 111,111,.8);
+            position: absolute;
+            min-width: 50vw;
+            max-height: 50vh;
+            overflow-y: auto;
+            bottom: 0;
+            left: 0;
+            transform: translate(0,100%);
+        }
+        .item:nth-child(3) .show-box{
+            left: auto;
+            right: 0;
+        }
+        .item:nth-child(4) .show-box{
+            left: auto;
+            right: 0;
+        }
+        .show-box a{
+            color:white;
+        }
+        .show-box p:hover{
+            background-color: rgba(111, 111,111,1);
+            color: pink;
+            /* white-space: nowrap; */
+        }
+        .show-box p:hover a{
+            background-color: transparent;
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+ <!-- 标题导航栏（固定定位） -->
+ <div class="nav-bar" >
+     <!-- 计算机的基础常识 -->
+        <div class="item">
+            <h1>计算机基础常识</h1>
+             <div class="show-box">
+                <p><a href="#a41">什么是ascii码表？</a></p>
+                <p><a href="#a42">计算机为什么使用二进制？</a></p>
+                <p><a href="#a43"> 编码与编号有什么区别？</a></p>
+                <p><a href="#a44">Unicode是编码还是编号？</a></p>
+                <p><a href="#a45">bmp格式是如何保存图片的？文件内有哪些信息，以什么方式保存的？使用十六进制编辑器进行编辑验证。</a></p>
+                <p><a href="#a46">gif格式是如何保存图片的？为什么图片放大能看到类似麻点的内容？</a></p>
+                <p><a href="#a47">几种图片格式有什么主要的区别？合适的场景分别是？</a></p>
+                <p><a href="#a48">将748367转换为5进制。</a></p>
+                <p><a href="#a49">什么是数字信号，什么是模拟信号？</a></p>
+                <p><a href="#a50">什么是当前工作目录？</a></p>
+                <p><a href="#a51">什么是路径列表？如何设置？</a></p>
+                <p><a href="#a52">interface一词有哪些含义？</a></p>
+                <p><a href="#a53">.bashrc文件是啥？</a></p>
+                <p><a href="#a54">如何计算相对路径？</a></p>
+                <p><a href="#a55">vi编辑器的编辑模式与常规模式是什么？如何切换？</a></p>
+                <p><a href="#a56">如何用命令删除非空文件夹？</a></p>
+                <p><a href="#a57">阅读vim教程vimtutor。</a></p>
+                <p><a href="#a58">>GIt提交GitHub教程第二版</a></p>
+                <p><a href="#a59">>GIt提交GitHub教程第一版</a></p>
+             </div>
+         </div>
+
+    <!-- html+css -->
+    <div class="item">
+        <h1> html+css</h1>
+         <div class="show-box">
+            <p><a href="#a1">opacity和rgba的应用场景？</a></p>
+            <p><a href="#a2">css水平垂直居中的方式？</a></p>
+            <p><a href="#a3">如何实现一个三角形？</a></p>
+            <p><a href="#a4">如何实现一个左边固定200px宽度，右边自适应的布局？</a></p>
+            <p><a href="#a5">px,em,rem,vw分别代表什么意思？</a></p>
+         </div>
+     </div>
+
+
+     <!-- javascript -->
+     <div class="item">
+        <h1> javascript</h1>
+         <div class="show-box">
+            <p><a href="#a6">JavaScript的数据类型有哪些？</a></p>
+            <p><a href="#a7">什么是显示转换隐式转换？</a></p>
+            <p><a href="#a8">什么是JS的DOM事件流？</a></p>
+            <p><a href="#a9">什么是事件委托？优点缺点有哪些？</a></p>
+            <p><a href="#a10">什么是浅拷贝和深拷贝，如何实现深拷贝浅拷贝？</a></p>
+            <p><a href="#a11">JS关于数组的常用方法？</a></p>
+            <p><a href="#a12">什么是闭包？大量使用闭包的缺点？</a></p>
+            <p><a href="#a13">es6常用的语法有哪些？</a></p>
+            <p><a href="#a14">数组去重的方法有哪些？</a></p>
+            <p><a href="#a15">什么是JS的作用域？</a></p>
+            <p><a href="#a16">什么是链式编程？</a></p>
+            <p><a href="#a17">如何解决地狱回调的问题？</a></p>
+            <p><a href="#a18">如何获取一个对象所有的属性名?如何修改一个对象属性名?</a></p>
+         </div>
+     </div>
+
+     <!-- Vue -->
+     <div class="item">
+        <h1> Vue</h1>
+         <div class="show-box">
+            <p><a href="#a20">v-for和v-if哪个先执行？</a></p>
+            <p><a href="#a21">computed和methods中方法的区别？</a></p>
+            <p><a href="#a22">computed和watch适合分别在什么时候使用？</a></p>
+            <p><a href="#a23">vue的生命周期有哪些？</a></p>
+            <p><a href="#a24">请描述一下keep-alive的使用场景</a></p>
+            <p><a href="#a25">路由传参的方式有哪些？</a></p>
+            <p><a href="#a26">如何实现路由懒加载？</a></p>
+            <p><a href="#a27">vue的路由钩子函数有哪些？</a></p>
+            <p><a href="#a28">你有使用过vue的自定义指令吗？举个项目中的示例</a></p>
+            <p><a href="#a29">怎么使用vue的过滤器？过滤器只能在插值表达式中使用吗？ </a></p>
+            <p><a href="#a30">v-model的原理是什么？</a></p>
+            <p><a href="#a31">vue的数据更新和视图更新是同步还是异步的？</a></p>
+            <p><a href="#a32">为什么更新了数据却不能操作dom？如何解决？</a></p>
+            <p><a href="#a33">简单介绍一下$nextTick</a></p>
+            <p><a href="#a34">v-for后面为什么要加:key？</a></p>
+            <p><a href="#a35">你知道dom diff算法吗？</a></p>
+            <p><a href="#a36">vue中组件通信的方式有哪些？</a></p>
+            <p><a href="#a37">什么是插槽？什么是具名插槽？什么是作用域插槽？什么是具名作用域插槽？</a></p>
+            <p><a href="#a38">如何像elmentui一样封装一个button组件，要求能实现控制背景色，尺寸，文字大小，以及能带有自定义的字体图标？</a>
+            </p>
+            <p><a href="#a39">router两种导航方式</a></p>
+            <p><a href="#a40">vuex的五种属性</a></p>
+         </div>
+     </div>
+
+
+ </div>
+
+<p> <h1 class="FristNameCao">FristNameCao面试题</h1></p>
+                <h2 class="right"><a>作者qq929877449</a></h2>
+    <div class="sousuo">
+        <span>搜索提示:</span> <input type="text" name="搜索">
+        <button class="btn" type="button">点我啊</button>
+    </div>
+    <div class="right">
+        <hr>
+        <h1>计算机基础常识</h1><br>
+        <hr>
+        <p><a href="#a41">什么是ascii码表？</a></p>
+        <p><a href="#a42">计算机为什么使用二进制？</a></p>
+        <p><a href="#a43"> 编码与编号有什么区别？</a></p>
+        <p><a href="#a44">Unicode是编码还是编号？</a></p>
+        <p><a href="#a45">bmp格式是如何保存图片的？文件内有哪些信息，以什么方式保存的？使用十六进制编辑器进行编辑验证。</a></p>
+        <p><a href="#a46">gif格式是如何保存图片的？为什么图片放大能看到类似麻点的内容？</a></p>
+        <p><a href="#a47">几种图片格式有什么主要的区别？合适的场景分别是？</a></p>
+        <p><a href="#a48">将748367转换为5进制。</a></p>
+        <p><a href="#a49">什么是数字信号，什么是模拟信号？</a></p>
+        <p><a href="#a50">什么是当前工作目录？</a></p>
+        <p><a href="#a51">什么是路径列表？如何设置？</a></p>
+        <p><a href="#a52">interface一词有哪些含义？</a></p>
+        <p><a href="#a53">.bashrc文件是啥？</a></p>
+        <p><a href="#a54">如何计算相对路径？</a></p>
+        <p><a href="#a55">vi编辑器的编辑模式与常规模式是什么？如何切换？</a></p>
+        <p><a href="#a56">如何用命令删除非空文件夹？</a></p>
+        <p><a href="#a57">阅读vim教程vimtutor。</a></p>
+        <p><a href="#a58">>GIt提交GitHub教程第二版</a</p>
+        <p><a href="#a59">>GIt提交GitHub教程第一版</a</p>
+
+                                    <hr>
+                                    <h1>html+css</h1><br>
+                                    <hr>
+
+                                    <p><a href="#a1">opacity和rgba的应用场景？</a></p>
+                                    <p><a href="#a2">css水平垂直居中的方式？</a></p>
+                                    <p><a href="#a3">如何实现一个三角形？</a></p>
+                                    <p><a href="#a4">如何实现一个左边固定200px宽度，右边自适应的布局？</a></p>
+                                    <p><a href="#a5">px,em,rem,vw分别代表什么意思？</a></p>
+                                    <hr>
+                                    <h1>javascript</h1><br>
+                                    <hr>
+                                    <p><a href="#a6">JavaScript的数据类型有哪些？</a></p>
+                                    <p><a href="#a7">什么是显示转换隐式转换？</a></p>
+                                    <p><a href="#a8">什么是JS的DOM事件流？</a></p>
+                                    <p><a href="#a9">什么是事件委托？优点缺点有哪些？</a></p>
+                                    <p><a href="#a10">什么是浅拷贝和深拷贝，如何实现深拷贝浅拷贝？</a></p>
+                                    <p><a href="#a11">JS关于数组的常用方法？</a></p>
+                                    <p><a href="#a12">什么是闭包？大量使用闭包的缺点？</a></p>
+                                    <p><a href="#a13">es6常用的语法有哪些？</a></p>
+                                    <p><a href="#a14">数组去重的方法有哪些？</a></p>
+                                    <p><a href="#a15">什么是JS的作用域？</a></p>
+                                    <p><a href="#a16">什么是链式编程？</a></p>
+                                    <p><a href="#a17">如何解决地狱回调的问题？</a></p>
+                                    <p><a href="#a18">如何获取一个对象所有的属性名?如何修改一个对象属性名?</a></p>
+                                    <p><a href="#a19">请大概讲一下JS的执行机制</a></p>
+                                    <hr>
+                                    <h1>Vue</h1>
+                                    <hr>
+                                    <p><a href="#a20">v-for和v-if哪个先执行？</a></p>
+                                    <p><a href="#a21">computed和methods中方法的区别？</a></p>
+                                    <p><a href="#a22">computed和watch适合分别在什么时候使用？</a></p>
+                                    <p><a href="#a23">vue的生命周期有哪些？</a></p>
+                                    <p><a href="#a24">请描述一下keep-alive的使用场景</a></p>
+                                    <p><a href="#a25">路由传参的方式有哪些？</a></p>
+                                    <p><a href="#a26">如何实现路由懒加载？</a></p>
+                                    <p><a href="#a27">vue的路由钩子函数有哪些？</a></p>
+                                    <p><a href="#a28">你有使用过vue的自定义指令吗？举个项目中的示例</a></p>
+                                    <p><a href="#a29">怎么使用vue的过滤器？过滤器只能在插值表达式中使用吗？ </a></p>
+                                    <p><a href="#a30">v-model的原理是什么？</a></p>
+                                    <p><a href="#a31">vue的数据更新和视图更新是同步还是异步的？</a></p>
+                                    <p><a href="#a32">为什么更新了数据却不能操作dom？如何解决？</a></p>
+                                    <p><a href="#a33">简单介绍一下$nextTick</a></p>
+                                    <p><a href="#a34">v-for后面为什么要加:key？</a></p>
+                                    <p><a href="#a35">你知道dom diff算法吗？</a></p>
+                                    <p><a href="#a36">vue中组件通信的方式有哪些？</a></p>
+                                    <p><a href="#a37">什么是插槽？什么是具名插槽？什么是作用域插槽？什么是具名作用域插槽？</a></p>
+                                    <p><a href="#a38">如何像elmentui一样封装一个button组件，要求能实现控制背景色，尺寸，文字大小，以及能带有自定义的字体图标？</a>
+                                    </p>
+                                    <p><a href="#a39">router两种导航方式</a></p>
+                                    <p><a href="#a40">vuex的五种属性</a></p>
+
+    </div>
+
+    <hr>
+
+
+    <div class="right">
+        <p>
+        <h1 id="a1">opacity和rgba的应用场景？</h1>
+        opactiy属性的值，可以被子元素继承。regba设置的元素不会继承该属性以及属性值</p>
+
+        <p>
+        <h1 id="a2">css水平垂直居中的方式？</h1>
+
+        定位居中。line-block实现水平，text-align：center实现垂直。</p>
+
+        <p>
+        <h1 id="a3">如何实现一个三角形？</h1>
+        padding和margin为0，将border和content的宽高设置为合理的数值时，再将content设置为0。</p>
+
+
+
+
+        <p>
+        <h1 id="a4">如何实现一个左边固定200px宽度，右边自适应的布局？</h1>
+        </p>
+
+
+        <p>
+        <h1 id="a5">px,em,rem,vw分别代表什么意思？</h1>
+        px是一个绝对长度单位，像素px是相对于显示器的屏幕分辨率决定的 em是相对长度单位，相对于对象内文本字体尺寸，这个值并不是固定的，而是相对于父级元素的大小决定
+        </p>
+
+
+        <hr>
+        <h1>javascript</h1><br>
+        <hr>
+        <p>
+        <h1 id="a6">JavaScript的数据类型有哪些？ </h1>
+        基本数据类型：字符串型，数字型，布尔值，null，undefined，symbol 引用数据类型：对象（object），数组（Array），函数（function） </p>
+
+        <p>
+        <h1 id="a7">什么是显示转换隐式转换？</h1>
+        显示转换一般指使用</p>
+
+
+
+        <p>
+        <h1 id="a8">什么是JS的DOM事件流？</h1>
+        事件流简单来说就是事件执行的顺序流程，DOM树中有大量的元素， 元素之间出现嵌套时，给父子元素同时设置了事件，父子元素的事件执行会按按照顺序执行 包括三个阶段：事件捕获阶段，处于目标阶段，事件冒泡阶段
+        </p>
+
+
+        <p>
+        <h1 id="a9">什么是事件委托？优点缺点有哪些？</h1>
+        也是事件代理，通过原本子元素的响应事件委托给父元素，让父元素担当事件监听的职务。事件代理的原则就是DOM元素事件冒泡 最大优点是节省内存占用，减少事件注册，比如ul代理所有li的click事件
+        缺点就是像blur没有冒泡机制的无法委托
+        </p>
+
+
+        <p>
+        <h1 id="a10">什么是浅拷贝和深拷贝，如何实现深拷贝浅拷贝？</h1>
+
+        浅拷贝是如同复制，也就是把a的值赋给b的同时把a的址赋给b，当b（a）的值改变的适合，a（b）的值也会变 深拷贝就是拷贝对象的具体内容，二内存地址是自主分配的，拷贝结束之后两个对象虽然存的值是一样的，但是
+        内存地址不一样，两个对象互相不影响不干涉
+        </p>
+
+
+        <p>
+        <h1 id="a11">JS关于数组的常用方法？</h1>
+
+
+        concat() 连接两个或者多个数组，返回一个新的数组<br> join() 数组转换字符串，默认逗号分隔<br> push() unshift() 添加元素操作<br> shift()
+        pop()删除元素操作，改变了原数组<br> sort()数组排序，改变原数组
+        <br> reverse()反转数组，改变原数组
+        <br> splice()更新数组，改变原数组
+        </p>
+
+        <p>
+        <h1 id="a12">
+            什么是闭包？大量使用闭包的缺点？
+
+        </h1>
+
+        闭包是指有权限访问另外一个函数内作用域中的变量的函数 优点是可以重复使用变量， 在全局变量可以重复使用，但是容易造成变量污染 缺点是容易导致内存泄露，更占用内存，会导网页性能变差
+        </p>
+
+        <p>
+        <h1 id="a13">
+            es6常用的语法有哪些？
+
+        </h1>
+
+        let,const用来声明变量。let表示变量，const表示常量。let和const都是块级作用域。 模板字符串：基本的字符串格式化。将表达式嵌入字符串中拼接
+        箭头函数：一部分函数的快捷写法，不需要function关键字创建函数，省略return关键字，继承上下文的this关键字 import和export，import导入模块，export导出模块 promise
+        同步的方法写异步代码</p>
+        <p>
+        <h1 id="a14">
+            数组去重的方法有哪些？
+
+        </h1>
+
+        利用es6中 SET去重方法 indexOf去重 双重for循环去重
+        </p>
+        <p>
+        <h1 id="a15">
+            什么是JS的作用域？
+
+        </h1>
+
+        就是在一定空间可以对数据进行读写操作，这个空间就是数据的作用域，js中常见就是全局和局部作用域。 全局作用域：最外层的函数定义的变量拥有全局作用域，对于任何内部函数来说，都是可以访问的
+        局部作用域：一般只在固定的代码内可以访问到，而对于函数内外部都是无法访问的，比如函数内部
+        </p>
+
+
+        <p>
+        <h1 id="a16">
+            什么是链式编程？
+
+        </h1>
+
+        就是将多个方法（函数）通过某种方式链接在一起，使多个逻辑块能按照流程逐步进行或者跳过执行 常见有promise 对象方法return this的链式操作</p>
+
+
+        <p>
+
+        <h1 id="a17">如何解决地狱回调的问题？</h1>
+        地狱回调就是存在异步代码不能保证按照顺序执行。 promise构造函数接收一个函数作为参数，我们需要处理的异步任务就是卸载该函数体内， 可以替换掉传统的回调函数解决
+        </p>
+
+        <p>
+        <h1 id="a18">如何获取一个对象所有的属性名?如何修改一个对象属性名?</h1>
+        Object.getOwnPropertyNames() 返回一个对象本身所有的属性名，不管是否可遍历</p>
+        <p>
+        <h1 id="a19">请大概讲一下JS的执行机制</h1>
+        单线程脚本语言，主线程任务--微任务--宏任务 执行顺序= 主线程任务--微任务--宏任务--宏任务里面的微任务--宏任务里面微任务的宏任务--直到任务完成</p>
+
+        <hr>
+        <h1>Vue</h1>
+        <hr>
+        <p>
+        <h1 id="a20">v-for和v-if哪个先执行？
+        </h1>
+        v-for高于v-if 在genElement方法中，处理for循环处于if上面的，所以v-for优先级高于v-if
+        </p>
+        <p>
+        <h1 id="a21">computed和methods中方法的区别？
+        </h1>
+        computed定义方法是属性的形式来调用，如{{}} computed带有缓存，methods不是 methods定义的方法，则加上（）调用
+        </p>
+        <p>
+        <h1 id="a22">computed和watch适合分别在什么时候使用？
+        </h1>
+        computed和watch适合分别在什么时候使用？ computed适用于动态计算data里面的属性值，需要加return，
+        </p>
+
+        <p>
+        <h1 id="a23">vue的生命周期有哪些？
+        </h1>
+        创建前（beforeCreate）实例初始化，此时组件的选项对象还未创建，无法访问methods，data，computed等上方法数据无法访问<br> 创建后（created） 挂在阶段还没有开始<br>
+        加载前（beforeMount）完成模板的翻译，但是还没有挂载到页面上
+        <br> 加载后（mounted）挂载完成，也渲染到页面上，此时可以进行一些ajax操作
+        <br> 更新前（beforeUpdate）此时data中数据是最新的，但是页面显示还是旧的，此时还没开始渲染dao
+        <br> 更新后（updated）实例更新完毕之后调用次函数，此时data中的状态值和界面上显示的数据，都完成更新，界面渲染完毕
+        <br> 销毁前（beforeDestroy）实例在销毁之前，这一步完全可以使用
+        <br> 销毁后（destroyed）此时全部销毁，实例也会解绑，所有监听一处
+        <br></p>
+        <p>
+        <h1 id="a24">请描述一下keep-alive的使用场景
+        </h1>
+        vue抽象组件，用来组件进行缓存，从而节省性能能，页面渲染完毕之后不会被渲染成为一个dom元素
+        </p>
+
+        <p>
+        <h1 id="a25">路由传参的方式有哪些？
+        </h1>
+        params传参【声明式router-link】：该方式通过router-link组件的to属性实现 【编程式this.$router.push]:同样需要子路由提前配置好参数 params传参，通过路由别名name进行传值
+        query传参，
+        </p>
+
+        <p>
+        <h1 id="a26">如何实现路由懒加载？
+        </h1>
+        延迟夹在，需要的时候进行加载。
+        </p>
+
+        <p>
+        <h1 id="a27">vue的路由钩子函数有哪些？
+        </h1>
+        全局钩子函数：beforeEach，afterRach，beforeResolve 单个路由里面的钩子：beforeEnter
+        组件路由：beforeRouteEnter，beforeRouteUpdate，beforeRouteLeave
+        </p>
+        <p>
+        <h1 id="a28">你有使用过vue的自定义指令吗？举个项目中的示例
+        </h1>
+        </p>
+        <p>
+        <h1 id="a29">怎么使用vue的过滤器？过滤器只能在插值表达式中使用吗？ </h1>
+
+        </p>
+
+        <p>
+        <h1 id="a30">v-model的原理是什么？</h1>
+        v-model主要提供了两个功能， view层输入值影响data的属性值， data属性值发生改变会更新view层的数值变化。
+        </p>
+
+
+        <p>
+        <h1 id="a31">vue的数据更新和视图更新是同步还是异步的？
+        </h1>
+        </p>
+
+        <p>
+        <h1 id="a32">为什么更新了数据却不能操作dom？如何解决？
+        </h1>
+        </p>
+
+
+        <p>
+        <h1 id="a33">简单介绍一下$nextTick
+        </h1>
+        </p>
+
+        <p>
+        <h1 id="a34">v-for后面为什么要加:key？
+        </h1>
+
+        </p>
+
+        <p>
+        <h1 id="a35">你知道dom diff算法吗？
+        </h1>
+
+        </p>
+
+        <p>
+        <h1 id="a36">vue中组件通信的方式有哪些？
+        </h1>
+        </p>
+
+        <p>
+        <h1 id="a37">什么是插槽？什么是具名插槽？什么是作用域插槽？什么是具名作用域插槽？
+        </h1>
+        </p>
+
+        <p>
+        <h1 id="a38">如何像elmentui一样封装一个button组件，要求能实现控制背景色，尺寸，文字大小，以及能带有自定义的字体图标？</=>
+        </h1>
+        </p>
+
+        <p>
+        <h1 id="a39">router两种导航方式
+        </h1>
+
+        </p>
+
+        <p>
+        <h1 id="a40">vuex的五种属性
+        </h1>
+
+
+        state：vuex的基本属性，存储变量<br> geeter：从state派生的基本数据，属于state的计算属性
+        <br> muatation：提交过呢更新数据，必须是同步操作
+        <br> action：可以包含异步操作
+        <br> moudules：模块化vuex，方便管理
+        <br>
+
+        <h1 id="a41">什么是ascii码表？</h1>
+        <p>美国信息交换标准代码</br>
+            每个ASCII码存储在一个Byte中，从0到127的数字代表不同的常用符号，如65代表大写A，97代表小写a。由于ASCII字节的7位中，最高位没有使用，那么最高位也被纳入这个内部代码，成为8位ASCII(ExtendedASCII代码。这种内部代码现在常用于许多特殊符号，如外语和表格。
+        </p>
+
+        <h1 id="a43">计算机为什么使用二进制？</h1>
+
+        <p>计算机俗称电脑，是用电信号的有无或高低或正负来表示数据，这些信号都有无或高低或正负，分别对应数学中的0和1，正是这电信号的这两种状态处理起来比较方便，所以，计算机存储或计算采用二进制</p>
+        <p>
+        <h1 id="a44"></h1> 编码与编号有什么区别？</p>
+
+        <p>编号和编码的主要区别在于编号不涉及用多少字节来表示，是用固定长度还是长度计划来表示。 编号只是一个抽象的概念，是一个数字化字符的过程。 在进一步比较编号和编码之前，先看看编号是怎么来的。 字符集通常是有序的编号集合。
+        </p>
+
+
+
+        <p>
+        <h1 id="a45">Unicode是编码还是编号？</h1></a></p>
+
+
+        <p>字符编码</p>
+
+        <p>
+        <h1 id="a46">bmp格式是如何保存图片的？文件内有哪些信息，以什么方式保存的？使用十六进制编辑器进行编辑验证。</h1></a></p>
+
+        <p>它采用位映射存储格式,BMP文件的数据按照从文件头开始的先后顺序分为四个部分： ◆ 位图文件头(bmp file header)：<br>
+            提供文件的格式、大小等信息 ◆<br>
+            位图信息头(bitmap information)： 提供图像数据的尺寸、位平面数、压缩方式、颜色索引等信息<br>
+            位映射使用位映射方式保持<br>
+
+        </p>
+
+
+
+
+        <p>
+        <h1 id="a47">gif格式是如何保存图片的？为什么图片放大能看到类似麻点的内容？</h1></a></p>
+
+        <p>打开图片后，点“菜单”——“另存为”，在对话框文件格式里选择gif 格式 就可以。<br>
+            动图
+            颜色表
+            无损压缩(原始图片颜色数量不足256色时)
+            从1677万种颜色选256种最接近的颜色
+            会有压缩过程存在
+            gif图片一般长宽都比较小
+            只存储变化的点，第一帧是完整的</p>
+
+
+        <p>
+        <h1 id="a48">几种图片格式有什么主要的区别？合适的场景分别是？</h1></a></p>
+        常见的图片格式主要有jpg、png、gif、psd、tif、bmp等格式<br>
+        JPEG格式，也叫做JPG或JPE格式，是最常用的一种文件格式，Photoshop“存储为”命令中默认的图片格式就是JPEG，大部分手机相机拍照的照片也是JPE格式。<br>
+        JPEG格式的压缩技术十分先进，能够将图像压缩在很小的储存空间，不过这种压缩是有损耗的，过度压缩会降低图片的质量。JPEG格式压缩的主要是高频信息，对色彩的信息保留较好，因此特别适合应用于互联网，可减少图像的传输和加载时间。<br>
+        PNG”格式<br>
+        PNG也是常见的一种图片格式，它最重要的特点是支持 alpha
+        通道透明度，也就是说，PNG图片支持透明背景。比如在使用Photoshop制作透明背景的圆形logo时，如果使用JPG格式，则图片背景会默认地存为白色，使用PNG格式则可以存为透明背景图片。
+
+        PNG格式图片也支持有损耗压缩，虽然PNG 提供的压缩量比JPG少，但PNG图片却比JPEG图片有更小的文档尺寸，因此现在越来越多的网络图像开始采用PNG格式。<br>
+        “GIF”格式<br>
+        GIF也是一种压缩的图片格式，分为动态GIF和静态GIF两种。<br>
+
+        GIF格式的最大特点是支持动态图片，并且支持透明背景。网络上绝大部分动图、表情包都是GIF格式的，相比与动画，GIF动态图片占用的存储空间小，加载速度快，因此非常流行。<br>
+        PSD”格式<br>
+        PSD格式是Photoshop默认的存储格式，适用于存储源文档和工作文件，修改起来比较方便。<br>
+        PSD格式的最大特点是可以保留透明度、图层、路径、通道等PS处理信息，但是需要专业的图形处理软件才能打开。PSD格式的缺点是体积庞大，十分占用存储空间。<br>
+        “TIFF”格式<br>
+        TIFF格式，也叫做或TIF格式，可以支持不同颜色模式、路径、透明度、以及通道，是打印文档中最常用的格式。Photoshop支持在TIFF文件中保存图层以及其他信息，在很多方面类似于PSD格式文件。<br>
+        “BMP”格式<br>
+        BMP 格式是Windows操作系统中的标准图像文件格式，能够被多种Windows应用程序所支持。BMP格式包含的图像信息较丰富，几乎不进行压缩，但由此导致了它占用的存储空间很大，所以，目前BMP在单机上比较流行。<br>
+
+
+        </p>
+        <p><a id="a49">
+                <h1>什么是数字信号，什么是模拟信号？</h1>
+            </a></p>
+        模拟信号是指：物理量的变化在时间上和幅度上都是连续的。把表示模拟量的信号称为模拟信号，并把工作在模拟信号下的电路称为模拟电路。声音、温度、速度等都是模拟信号。<br>
+        数字信号是指：物理量的变化在时间上和数值（幅度）上都是不连续（或称为离散）的。把表示数字量的信号称为数字信号，并把工作在数字信号下的电路称为数字电路。
+        十字路口的交通信号灯、数字式电子仪表、自动生产线上产品数量的统计等都是数字信号。<br>
+        <p>
+        <h1 id="a49"></h1>将748367转换为5进制。</a></p>
+
+
+
+
+        <p><a id="a50">
+                <h1>什么是当前工作目录？</h1>
+            </a></p>
+
+        <p>(working folder/directory/tree)
+            current directory；运行pwd命令显示</p>
+
+
+        <p><a id="a51">
+                <h1>什么是路径列表？如何设置？</h1>
+            </a></p>
+        <p>是一个文件夹列表，可以在系统里设置；<br>
+            运行 echo $PATH 显示；
+            which command 可以查看到command来自于路径列表中的哪个文件夹
+        </p>
+
+
+        <p><a id="a52">
+                <h1>interface一词有哪些含义？</h1>
+            </a></p>
+
+        <p>接口</p>
+        <p><a id="a53">
+                <h1>.bashrc文件是啥？
+            </a></h1>
+        </p>
+        <p>用户登录时执行的脚本文件</p>
+
+        <p><a id="a54">
+                <h1>如何计算相对路径？
+            </a></h1>
+        </p>
+        <p><a id="a55">
+                <h1>vi编辑器的编辑模式与常规模式是什么？如何切换？
+            </a></h1>
+        </p>
+        <p>按i进入编辑模式,按esc退出编辑模式返回常规模式</p>
+        <p><a id="a56">
+                <h1>如何用命令删除非空文件夹？
+            </a></h1>
+        </p>
+
+        <p>rm -r recursive </p>
+
+        <p><a id="a57">
+                <h1>阅读vim教程vimtutor。
+            </a></h1>
+        </p>
+
+        <p>直接在git输入vimtutor</p>
+
+        </p>
+
+
+
+        <p><a id="a58">
+                <h1>GIt提交GitHub教程第二版</h1>
+            </a></p>
+        <a href=" https://www.liaoxuefeng.com/wiki/896043488029600">廖雪峰git命令大全</a>
+
+        <h1>首次 git提交代码去GitHub方法<strong>注意:(此方法仅限于已经绑定了秘钥的git,没绑定秘钥的后期出教程即可观看)</strong></h1>
+
+
+        1. git init 首先初始化代码(每个文件只需要初始化一次就行)<br>
+        2. git add . 添加所有文件或者使用git add xxx.txt添加单个文件<br>
+        3. git add commit -m "任意字母为了方便记录提交的是什么"<br>
+        4. git git remote add origin(可以是任意名称) 绑定的邮箱:FristNameCao/-.git<br>
+        5. git branch -M main (重命名分支文件也可以是任意的比如aa或者bb)<br>
+        <p> 6. git push -u origin(这个就是步骤4你刚命名的名称) main(这个就是步骤5命名的名称比如刚说的aa或者bb)</p>
+
+
+        后期git提交GitHub方法<br>
+        1.git add . 添加所有文件或者使用git add xxx.txt添加单个文件<br>
+        2.git add commit -m "任意字母为了方便记录提交的是什么"<br>
+        3.git push<br>
+
+
+        <p><a id="a59">
+                <h1>GIt提交GitHub教程第一版</h1>
+           </a> </p>
+
+                1.首先生成 ssh-keygen 生成秘钥<br>
+                2. git add . 添加所有文件或者使用git add xxx.txt添加单个文件<br>
+                3. git add commit -m "任意字母为了方便记录提交的是什么"<br>
+                4. git branch -M main(重命名分支文件也可以是任意的比如aa或者bb)<br>
+                5. git remote add origin(可以是任意名称) 你的邮箱:FristNameCao/-.git<br>
+            <p>   6. git push -u origin main 首次提交使用这个代码</p>
+
+                后期git提交GitHub方法<br>
+                1.git add . 添加所有文件或者使用git add xxx.txt添加单个文件<br>
+                2.git add commit -m "任意字母为了方便记录提交的是什么"<br>
+                3.git push<br>
+
+            </a></p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+    </div>
+
+</body>
+
+</html>
